@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/inscription.css') }}">
+</head>
+<body>
+    <div class="containerCnx">
+        <div class="leftPart">
+            <a href="{{ path('index') }}" class="btn-rond"><img src="{{ asset('../img/icons/left.png') }}" alt=""></a>
+        </div>
+        <div class="containerFormCnx">
+            <div class="headerCnx">
+                <img src="{{ asset('../img/icons/logo-simple.png') }}" alt="" id="logoSimple">
+                <h1 class="titreCnx">S'inscrire</h1>
+            </div>
+            <div class="contantFormCnx">
+                <form id="inscription" class="formCnx">
+                    <input type="text" name="nom" placeholder="Nom">
+                    <input type="text" name="prenom" placeholder="Prénom">
+                    <input type="text" name="mail" placeholder="Email">
+                    <input type="password" name="mdp" placeholder="Mot de passe">
+                    <input type="password" name="mdp2" placeholder="Vérification mot de passe">
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+        console.log($);
+        $('#inscription').on('submit', function (e) {
+            e.preventDefault();
+
+            var data = {};
+            //[ {name: nom-de-input, value: valeur-input}, {...}, {...}, {...}... ]
+            $(this).serializeArray().forEach(obj=>{
+                let name = obj.name;
+                let value = obj.value || '';
+                if (data[name]) {
+                    if (!Array.isArray(data[name])) {
+                        data[name] = [data[name]];
+                    }
+                    data[name].push(value);
+                } else {
+                    data[name] = value;
+                }
+            });
+            if(data["mdp"] == data['mdp2']){
+                $.ajax({
+                    url:'/inscription',
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    success: function (response) {
+                        window.location.replace("{{ absolute_url(path('accueil')) }}");
+                    },
+                    error: function (response) {
+                        console.log('probleme de cnx');
+                    }
+                });
+            } else {
+                alert('confirmation de mot de passe incorrecte');
+            }
+        });
+    </script>
+</body>
+
+</html>
+

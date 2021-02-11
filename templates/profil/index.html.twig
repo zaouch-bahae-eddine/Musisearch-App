@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %}MusiSearch{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/introArtist.css') }}">
+{% endblock %}
+{% block sideBar %}
+    {{ parent() }}
+{% endblock %}
+               {% block titleHeder %}
+                    {% if idUser == app.user.id %}<h1>Mon profil</h1> {% endif %}
+               {% endblock %}
+            {% block ButtonHeader %}
+                {% if idUser == app.user.id %}
+                    <a id="addMusique">
+                        <img src="{{ asset('img/icons/addMusic.png') }}" alt=""> <div>Nouvelle chanson</div>
+                    </a>
+                {% endif %}
+            {% endblock %}
+    {% block body %}
+        <div class="containerListMyMusic">
+            <div id="idUser" style="display: none;">{{ idUser }}</div>
+            <div class="myMusicItems" id="musicItems">
+            </div>
+        </div>
+    {% endblock %}
+
+{% block musicBar%}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/profil.js') }}"></script>
+{% endblock %}

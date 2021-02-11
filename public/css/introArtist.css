@@ -1,0 +1,46 @@
+.MyProfil{
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 240px;
+    border-radius: 70px;
+    background: #242B47;
+    margin-bottom: 20px;
+    color: white;
+}
+.ContainerTop {
+    display: flex;
+}
+.ContainerTop > img {
+    width: 100px;
+    height: 100px;
+    margin-top: 1.4em;
+    margin-left: 1em;
+}
+.ContainerBio{
+    margin-left: 0.8em;
+}
+.ContainerBio > p{
+    font-size:1.1em;
+    margin-bottom: -15px;
+}
+.ContainerBio > button{
+    width: 90px;
+    font-size:0.8em;
+    color: white;
+    background-color: #FF7276;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 5px;
+}
+#email{
+    font-size:0.8em;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+#bio{
+    font-size:1em;
+    margin-top: 27px;
+    text-align: center;
+}

@@ -1,0 +1,273 @@
+.AudioContainer{
+    background-color: #1A2035;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 2px 6px #FF7276;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 15;
+}
+
+
+.TitleMusic{
+    font-family: 'Rubik', sans-serif;
+}
+.AudioButtonControlContainer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+.AudioButtonFavoritDownload, .AudioButtonRepeatVolume{
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.Download img, .Favorit img, .Repeat img, .Volume img{
+    width: 17px;
+    cursor: pointer;
+}
+.PlayPause{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #ff7276;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Previose, .Next{
+    cursor: pointer;
+}
+.AudioButtonControl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+}
+.Timers{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.FullScreenVerrou{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+}
+.AudioProgress{
+    width: 100%;
+    border-radius: 3px;
+    padding: 20px 5px;
+    z-index: 1000;
+}
+
+.AudioProgressBar, .AudioProgressBarVolume{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    overflow-x: visible;
+}
+
+.AudioProgressBar, .AudioProgressBarFull{
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+.AudioProgressBarFull{
+    position: relative;
+    background-color: #ff7276;
+    width: 0%;
+    transition: width 1ms linear 0.1ms;
+}
+.Pin{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    transform: translateY(-6px);
+}
+/* Volume */
+.AudioProgressBarVolume{
+    width: 60px;
+    position: fixed;
+    transform: rotate(-90deg);
+    background: rgba(255, 255, 255, 0.541);
+    height: 3px;
+    border-radius: 3px;
+    visibility: hidden;
+    z-index: 1;
+}
+.AudioProgressBarFullVolume{
+    position: relative;
+    background-color: #ff7276;
+    width: 0%;
+    transition: width 1ms linear 0.1ms;
+    height: 100%;
+    border-radius: 3px;
+}
+.AudioProgressBarVolume .Pin{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    transform: translateY(-3px);
+}
+.LoadingMusic{
+    position: absolute;
+    width: 34px !important;
+    margin: 0 auto;
+    margin-left: 12px;
+}
+.VolumeVerrou{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: none;
+    z-index: 1;
+}
+#play, #next, #previous{
+    width: 16px;
+}
+/* Volume */
+@media screen and (max-width : 768px){
+    .AudioControllerMain{
+        width: 100%;
+        padding: 0 7px;
+        max-width: 675px;
+        margin: 0 auto;
+    }
+    .Timers{
+        font-size: 9pt;
+        color: white;
+    }
+    .AudioProgress{
+        padding: 0;
+        padding-bottom: 5px;
+    }
+    .AudioProgressBar, .AudioProgressBarFull{
+        height: 3px;
+    }
+    .Pin{
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        transform: translateY(-4px);
+    }
+    .MusicInfoContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -60px;
+        width: 100%;
+    }
+    .MusicInfo{
+        max-width: 200px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        box-shadow: 0px 0px 4px #FF7276;
+    }
+    .MusicInfo img{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+    }
+
+    .LoadingMusic{
+        display: none;
+    }
+    .MusicInfoText{
+        font-size: 10pt;
+        color: #FF7276;
+        padding: 0 6px;
+
+    }
+    .AudioControllerLogo{
+        display: none;
+    }
+}
+@media screen and (min-width : 768px) {
+
+
+    .Timers{
+        font-size: 9pt;
+        color: white;
+    }
+    .AudioProgress{
+        padding: 0;
+        padding-bottom: 5px;
+    }
+    .AudioProgressBar, .AudioProgressBarFull{
+        height: 3px;
+    }
+    .Pin{
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        transform: translateY(-4px);
+    }
+    .AudioControllerLogo{
+        width: 20%;
+    }
+    .AudioControllerLogo img{
+        width: 100px;
+        float: right;
+        margin-right: 22px;
+    }
+    .MusicInfoContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        overflow: hidden;
+
+    }
+    .MusicInfo{
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+    }
+    .MusicInfo img{
+        width: 60px;
+        height: 60px;
+    }
+    .MusicInfoText{
+        font-size: 8.5pt;
+        color: white;
+        padding: 0 6px;
+    }
+
+    .MusicInfoText .TitleMusic{
+        margin-bottom: 7px;
+    }
+    .AudioControllerMain{
+        width: 60%;
+        max-width: 400px;
+    }
+    @media screen and (min-width : 1100px) {
+        .AudioControllerMain{
+            max-width: 1100px;
+        }
+        .MusicInfoText{
+            font-size: 10pt;
+        }
+    }
+}

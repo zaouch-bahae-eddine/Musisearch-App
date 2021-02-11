@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/connexion.css') }}">
+</head>
+<body>
+<div class="containerCnx">
+    <div class="leftPart">
+        <a href="{{ path('index') }}" class="btn-rond"><img src="{{ asset('img/icons/left.png') }}" alt=""></a>
+    </div>
+    <div class="containerFormCnx">
+        <div class="headerCnx">
+            <img src="{{ asset('img/icons/logo-simple.png') }}" alt="" id="logoSimple">
+            <h1 class="titreCnx">S'inscrire</h1>
+        </div>
+        <div class="contantFormCnx">
+            <form action="" class="formCnx" method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <input type="text" value="{{ last_username }}" name="mail" id="inputMail" class="form-control" required autofocus>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                <input type="password" name="mdp" id="inputPassword" class="form-control" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

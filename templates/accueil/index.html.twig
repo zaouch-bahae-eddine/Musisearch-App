@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}MusiSearch{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+{% endblock %}
+{% block sideBar %}
+    {{ parent() }}
+{% endblock %}
+
+{% block titleHeder %}<h1>Accueil</h1>{% endblock %}
+{% block body %}
+
+
+    <div class="containerListMusic">
+        <div class="musicItems" id="musicItems">
+        </div>
+    </div>
+{% endblock %}
+{% block musicBar%}
+    {{ parent() }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('js/accueil.js') }}"></script>
+{% endblock %}

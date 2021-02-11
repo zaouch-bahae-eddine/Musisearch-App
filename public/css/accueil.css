@@ -1,0 +1,52 @@
+.musicItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.musicItem{
+    display: flex;
+    width: 80%;
+    background: #242B47;
+    color: white;
+    align-items: center;
+    border-radius: 13px;
+    padding: 0 10px;
+    margin: 6px 0;
+    max-width: 740px;
+    box-shadow: 0 0 0 2px #0000000f;
+}
+.musicItem:hover{
+    background: #ff7276;
+    cursor: pointer;
+}
+.selected {
+    background: #ff7276;
+}
+
+.musicItem img{
+    border-radius: 5px;
+}
+.musicItemsImg{
+    width: 30px;
+    height: 30px;
+}
+.titlesItem{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 80px;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+.racourciesItem {
+    display: flex;
+    padding-right: 10px;
+    width: 90px;
+    justify-content: space-around;
+}
+.racourciesItem img{
+    width: 18px;
+    height: 18px;
+}

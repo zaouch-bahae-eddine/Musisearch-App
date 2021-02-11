@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ asset('css/acceuilSansCnx.css') }}">
+    <title>Document</title>
+</head>
+<body>
+<div class="NavBar">
+
+    <div class="NavBarContent">
+        <a href="{{ path('app_login') }}" class="Seconnecter NavIte">Se Connecter</a>
+        <a href="{{ path('inscription') }}" class="NavItem">S'inscrire</a>
+    </div>
+
+</div>
+
+<div  class="Header">
+
+
+    <div class="HeaderBackground">
+
+        <div class="HeaderContent">
+
+            <div class="HeaderIcon">
+
+                <div class="HeaderRendB">
+                    <div class="HeaderRendR"></div>
+                </div>
+
+            </div>
+
+            <div class="HeaderTextParent">
+                <div class="HeaderText">
+
+                    <h1 class="HeaderTitle">Musi<span>Search</span></h1>
+                    <p class="HeaderDescription">Partager et créer de la musique indépendante, voilà ce que propose MusiSearch.</p>
+                    <div class="HeaderButton">
+                        <a href="{{ path('inscription') }}" class="inscrire"> S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div  class="Content ServicesContainer" >
+    <h2 class="ServiceTitle">Services</h2>
+    <div class="Services">
+        <div class="Service">
+            <img class="ServiceIcon" src="{{ asset('img/icons/caskbaf.png') }}" alt="icon-service"/>
+            <h3 class="ServiceName">Ecouter</h3>
+        </div>
+        <div class="Service">
+            <img class="ServiceIcon" src="{{ asset('img/icons/cd.png') }}" alt="icon-service"/>
+            <h3 class="ServiceName">Remarquer</h3>
+        </div>
+        <div class="Service">
+            <img class="ServiceIcon" src="{{ asset('img/icons/guitare.png') }}" alt="icon-service"/>
+            <h3 class="ServiceName">Produire</h3>
+        </div>
+        <div class="Service">
+            <img class="ServiceIcon" src="{{ asset('img/icons/radio.png') }}" alt="icon-service"/>
+            <h3 class="ServiceName">Decouvrir</h3>
+        </div>
+    </div>
+</div>
+
+<div class="FooterContainer">
+    <div class="FooterLogo"></div>
+
+    <div class="FooterBottom">
+        <div class="FooterCopyRight">CopyRight@2021</div>
+    </div>
+
+</div>
+</body>
+</html>

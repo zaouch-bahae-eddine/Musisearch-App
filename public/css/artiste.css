@@ -1,0 +1,42 @@
+.containerListArtiste{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 30px;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.RechArtisteItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 210px;
+    height: 210px;
+    border-radius: 12px;
+    background: #242B47;
+    margin-bottom: 20px;
+}
+.RechArtisteItems > img {
+    width: 85px;
+    height: 85px;
+    margin-top: 1em;
+}
+.RechArtisteItems > p{
+    font-size:1.2em;
+    color: white;
+}
+.RechArtisteItems > button{
+    width: 100px;
+    font-size:0.925em;
+    color: white;
+    background-color: #FF7276;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+}
+.RechArtisteItems a{
+    text-decoration: none;
+    color: white;
+    padding: 15px 0px;
+}

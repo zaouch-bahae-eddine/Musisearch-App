@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.NavBar{
+    width: 100%;
+    position: absolute;
+}
+
+a:link
+{
+    text-decoration:none;
+    transition: 0.3s;
+
+}
+
+a:hover {
+    color: white; /* pour le passage de la souris*/
+    opacity: 0.7;
+}
+
+.NavBarContent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+.NavItem{
+    color: white!important;
+    font-size: 14px;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.NavItem:hover{
+    color: rgba(245, 245, 245, 0.692);
+}
+.Seconnecter{
+    padding: 7px;
+    background-color: #ff7276;
+    border-radius: 6px;
+    margin-left: 7px;
+    color: white;
+    transition: 0.3;
+
+}
+.HeaderBackground{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #1a2035, #1a2035c2), url('../img/wallpaper/background.jpg');
+    background-position: center, top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.HeaderContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    padding-bottom: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.HeaderIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderRendB{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderRendR{
+    width: 180px;
+    height: 180px;
+    background-color: #ff7276;
+    border-radius: 50%;
+    background-image: url('../img/icons/l.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.HeaderText{
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 12px;
+}
+.HeaderTitle{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.8rem;
+}
+.HeaderTitle span{
+    color: #ff7276;
+}
+.HeaderDescription{
+    padding: 25px 0;
+    width: 250px;
+    text-align: center;
+}
+.HeaderButton{
+    display: flex;
+    justify-content: center;
+}
+.inscrire{
+    width: 180px;
+    text-align: center;
+    padding: 1rem;
+    background-color: #ff7276;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+@media screen and ( min-width: 500px ){
+    .HeaderBackground{
+        background-attachment: fixed;
+        height: 70vh;
+    }
+    .HeaderContent{
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .HeaderText{
+        width: fit-content;
+        margin: 0;
+        order: 1;
+    }
+    .HeaderDescription{
+        padding: 24px 0;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .HeaderButton{
+        justify-content:flex-start;
+    }
+    .HeaderIcon{
+        order: 2;
+    }
+    @media screen and ( min-width: 768px ){
+        .HeaderBackground{
+            background-attachment: fixed;
+            height: 75vh;
+        }
+        .HeaderIcon{
+            margin-right: auto;
+        }
+
+        .HeaderRendB{
+            width: 280px;
+            height: 280px;
+        }
+        .HeaderRendR{
+            width: 260px;
+            height: 260px;
+            background-size: 140px;
+        }
+
+        .HeaderTextParent{
+            width: 60vw;
+            display: flex;
+            justify-content: center;
+        }
+        .HeaderTitle{
+            font-family: 'Rubik', sans-serif;
+            font-size: 3.8rem;
+            text-align: left;
+        }
+        .HeaderDescription{
+            width: 350px;
+            padding: 24px 0;
+            font-size: 1.4rem;
+            text-align: left;
+        }
+        .Sinscrir{
+            width: 250px;
+            text-align: center;
+            padding: 1.2rem;
+            background-color: #ff7276;
+            border-radius: 6px;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+        @media screen and ( min-width: 1400px ){
+            .HeaderRendB{
+                width: 440px;
+                height: 440px;
+            }
+            .HeaderRendR{
+                width: 410px;
+                height: 410px;
+                background-size: 200px;
+            }
+
+            .HeaderTitle{
+                font-size: 6rem;
+            }
+            .HeaderDescription{
+                width: 500px;
+                padding: 40px 0;
+                font-size: 1.8rem;
+                text-align: left;
+                margin: 0;
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+.Service{
+    align-self: flex-start;
+    background-color: white;
+    width: 100%;
+    height: 230px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 1em;
+    margin-right: 18px;
+}
+.ServiceIcon{
+    width: 130px;
+    padding: 10px;
+}
+
+.ServiceName{
+    color: #1a2035;
+    font-size: 1.3rem;
+}
+
+@media screen and ( min-width: 425px){
+    .Service{
+        align-self: flex-start;
+        background-color: white;
+        width: 200px;
+        height: 230px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+    }
+
+}
+
+.FooterContainer{
+    width: 100%;
+}
+.FooterLogo{
+    height: 160px;
+    background-color: #252d47;
+    background-image: url('../img/icons/logo-musisearch.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px auto;
+
+}
+
+.FooterBottom{
+    background-color: #191e30;
+    display: flex;
+    color: white;
+    font-size: 0.7rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.FooterSocialNetwork{
+    color: white;
+    padding: 10px;
+}
+.FooterCopyRight{
+    margin-left: auto;
+    padding: 10px;
+}
+.icon{
+    color: #ff7276;
+    margin-right: 5px;
+}
+
+.ServicesContainer{
+    background-color: #1a2035;
+    padding: 50px 10px;
+    padding-top:20px;
+}
+.Services{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.ServiceTitle{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 20px;
+    padding: 0.8em;
+    border-bottom: white solid 3px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    letter-spacing: 5px;
+}
+@media screen and ( min-width: 425px ){
+    .Services{
+        width: 407px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        padding: 30px 0;
+    }
+    @media screen and ( min-width: 500px ){
+        .Services{
+            width: 474px;
+        }
+        @media screen and (min-width: 768px ){
+            .Services{
+                width: 71vw;
+                justify-content: space-between;
+                max-width: 1000px;
+            }
+        }
+    }
+}
+
+.cursor {
+    cursor : pointer;
+}
